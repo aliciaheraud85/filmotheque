@@ -9,7 +9,7 @@ public class Genre {
     private String titre;
     private ArrayList<Film> film = new ArrayList<>();
 
-    public Genre(long id, String titre, ArrayList<Film> film) {
+    public Genre(long id, String titre) {
         this.id = id;
         this.titre = titre;
         this.film = film;

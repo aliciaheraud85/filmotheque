@@ -6,7 +6,7 @@ import java.util.Objects;
 public class Participant extends Personne{
     private ArrayList<Film> film = new ArrayList<>();
 
-    public Participant(long id, String nom, String prenom, ArrayList<Film> film) {
+    public Participant(long id, String nom, String prenom) {
         super(id, nom, prenom);
         this.film = film;
     }

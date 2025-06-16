@@ -6,22 +6,20 @@ import java.util.Objects;
 public class Membre extends Personne{
     private String pseudo;
     private String motDePasse;
-    private boolean admin;
+    private boolean admin = false;
     private ArrayList<Avis> avis = new ArrayList<>();
 
-    public Membre(long id, String nom, String prenom, String pseudo, String motDePasse, boolean admin, ArrayList<Avis> avis) {
+    public Membre(long id, String nom, String prenom, String pseudo, boolean admin) {
         super(id, nom, prenom);
         this.pseudo = pseudo;
-        this.motDePasse = motDePasse;
-        this.admin = false;
-        this.avis = avis;
+        this.admin = admin;
     }
 
     public Membre(String nom, String prenom, String pseudo, String motDePasse, boolean admin, ArrayList<Avis> avis) {
         super(nom, prenom);
         this.pseudo = pseudo;
         this.motDePasse = motDePasse;
-        this.admin = false;
+        this.admin = admin;
         this.avis = avis;
     }
 

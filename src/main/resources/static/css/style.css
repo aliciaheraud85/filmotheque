@@ -1,0 +1,30 @@
+.header{
+    box-shadow: 0 10px 10px -5px rgba(0, 0, 0, 0.3);
+    width: 100%;
+    font-family: 'Montserrat', sans-serif;
+    color: dimgrey;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin: 0;
+}
+
+a{
+    text-decoration: none;
+    color: dimgrey;
+    padding-right: 20px;
+    font-size: 1.5em;
+}
+
+h2{
+    font-size: 2em;
+    text-align: center;
+    margin-top: 15%;
+    font-family: 'Montserrat', sans-serif;
+}
+
+h3{
+    padding: 20px;
+    font-size: 2em;
+    font-family: 'Montserrat', sans-serif;
+}

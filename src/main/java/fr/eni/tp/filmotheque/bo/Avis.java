@@ -9,7 +9,7 @@ public class Avis {
     private Membre membre;
     private Film film;
 
-    public Avis(int note, long id, String commentaire, Membre membre, Film film) {
+    public Avis(long id, int note, String commentaire, Membre membre) {
         this.note = note;
         this.id = id;
         this.commentaire = commentaire;

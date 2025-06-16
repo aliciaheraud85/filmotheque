@@ -15,7 +15,7 @@ public class Film {
     private ArrayList<Participant> acteurs = new ArrayList<>();
     private Participant realisateur;
 
-    public Film(long id, String titre, int annee, int duree, String synopsis, ArrayList<Avis> avis, ArrayList<Participant> acteurs, Genre genre, Participant realisateur) {
+    public Film(long id, String titre, int annee, int duree, String synopsis) {
         this.id = id;
         this.titre = titre;
         this.annee = annee;
@@ -112,17 +112,26 @@ public class Film {
 
     @Override
     public String toString() {
-        return "Film{" +
-                "id=" + id +
-                ", titre='" + titre + '\'' +
-                ", annee=" + annee +
-                ", duree=" + duree +
-                ", synopsis='" + synopsis + '\'' +
-                ", avis=" + avis +
-                ", genre=" + genre +
-                ", acteurs=" + acteurs +
-                ", realisateur=" + realisateur +
-                '}';
+        StringBuilder builder = new StringBuilder();
+        builder.append("Film (");
+        builder.append(id);
+        builder.append(")\n\ttitre : ");
+        builder.append(titre);
+        builder.append("[annee : ");
+        builder.append(annee);
+        builder.append(", duree : ");
+        builder.append(duree);
+        builder.append(" minutes]\n\tSynopsis : ");
+        builder.append(synopsis);
+        builder.append("\n\trealisateur : ");
+        builder.append(realisateur);
+        builder.append("\n\tacteurs : ");
+        builder.append(acteurs);
+        builder.append("\n\tgenre : ");
+        builder.append(genre);
+        builder.append("\n\tAvis : ");
+        builder.append(avis);
+        return builder.toString();
     }
 
     @Override
