@@ -1,0 +1,36 @@
+<form data-th-action="@{${action}}" method="post" data-th-fragment="frag-film-form(action)">
+
+    <ul class="flex-outer">
+        <li>
+            <label for="inputGenre">Genre : </label>
+            <input type="text" name="prenom" data-th-disabled="${#strings.isEmpty(action)}" id="inputGenre" required data-th-value="${filmParId.getGenre().titre}" />
+        </li>
+        <li>
+            <label for="inputAnnee">Année : </label>
+            <input type="text" name="nom" id="inputAnnee" data-th-disabled="${#strings.isEmpty(action)}" required data-th-value="${filmParId.annee}" />
+        </li>
+        <li>
+            <label for="inputTitre">Titre : </label>
+            <input type="text" name="email" id="inputTitre" data-th-disabled="${#strings.isEmpty(action)}" required data-th-value="${filmParId.titre}" />
+        </li>
+        <li>
+            <label for="inputReal">Réalisateur : </label>
+            <input type="text" name="email" id="inputReal" data-th-disabled="${#strings.isEmpty(action)}" required data-th-value="${filmParId.getRealisateur().prenom + ' ' + filmParId.getRealisateur().nom}" />
+        </li>
+        <li>
+            <label for="inputDuree">Durée : </label>
+            <input type="text" name="email" id="inputDuree" data-th-disabled="${#strings.isEmpty(action)}" required data-th-value="${filmParId.duree}" />
+        </li>
+        <li>
+            <label for="inputActeurs">Acteur(s) : </label>
+            <input type="text" name="email" id="inputActeurs" data-th-disabled="${#strings.isEmpty(action)}" required data-th-value="${filmParId.acteurs}" />
+        </li>
+        <li>
+            <label for="inputSynop">Synopsis : </label>
+            <input type="text" name="email" id="inputSynop" data-th-disabled="${#strings.isEmpty(action)}" required data-th-value="${filmParId.synopsis}" />
+        </li>
+        <li>
+            <button type="submit">Enregistrer</button>
+        </li>
+    </ul>
+</form>
